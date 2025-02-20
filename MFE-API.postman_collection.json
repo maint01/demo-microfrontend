@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "9a367bf0-9805-4422-89e9-5779dfe3b06b",
+		"name": "MFE-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40116391",
+		"_collection_link": "https://vnamo-e-checklist.postman.co/workspace/VNAMO-E-CHECKLIST-Workspace~b3a0521e-bf86-460f-83fd-7c17944f8079/collection/40116391-9a367bf0-9805-4422-89e9-5779dfe3b06b?action=share&source=collection_link&creator=40116391"
+	},
+	"item": [
+		{
+			"name": "list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/configs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": \"8f430292-9715-4d89-95dc-091d1765e9df\",\r\n        \"modulePath\": \"plugin/plugin1\",\r\n        \"moduleName\": \"Mfe1Module\",\r\n        \"type\": \"module\",\r\n        \"remoteEntry\": \"http://localhost:5000/remoteEntry.js\",\r\n        \"exposedModule\": \"./FEModule\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/configs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/configs/8f430292-9715-4d89-95dc-091d1765e9df",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configs",
+						"8f430292-9715-4d89-95dc-091d1765e9df"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
